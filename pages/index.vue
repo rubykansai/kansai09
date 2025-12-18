@@ -32,6 +32,48 @@
                 @Otsu Traditional Performing Arts Center
               </a>
             </div>
+            <div class="d-flex justify-center gap-4 mb-8 d-none d-md-flex">
+              <v-btn
+                size="large"
+                color="#87CEEB"
+                rounded
+                class="cta-button px-8"
+                disabled
+              >
+                Call for Proposals
+              </v-btn>
+              <v-btn
+                size="large"
+                color="#87CEEB"
+                rounded
+                class="cta-button px-8"
+                href="https://esa-pages.io/p/sharing/22789/posts/19/b1085a24df458e23c0c1.html"
+                target="_blank"
+              >
+                Call for Sponsors
+              </v-btn>
+            </div>
+            <div class="d-flex flex-column align-center gap-3 mb-8 d-flex d-md-none">
+              <v-btn
+                size="large"
+                color="#87CEEB"
+                rounded
+                class="cta-button px-8"
+                disabled
+              >
+                Call for Proposals
+              </v-btn>
+              <v-btn
+                size="large"
+                color="#87CEEB"
+                rounded
+                class="cta-button px-8"
+                href="https://esa-pages.io/p/sharing/22789/posts/19/b1085a24df458e23c0c1.html"
+                target="_blank"
+              >
+                Call for Sponsors
+              </v-btn>
+            </div>
           </v-card-item>
         </v-card>
       </v-col>
@@ -83,6 +125,28 @@
 
 .venue-link:hover {
   color: #87CEEB;
+}
+
+.cta-button {
+  color: #041D4F !important;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(135, 206, 235, 0.4);
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .tagline {
