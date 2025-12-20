@@ -53,7 +53,7 @@
                 Call for Sponsors
               </v-btn>
             </div>
-            <div class="d-flex flex-column align-center gap-3 mb-8 d-flex d-md-none">
+            <div class="flex-column align-center gap-3 mb-8 d-flex d-md-none">
               <v-btn
                 size="large"
                 color="#87CEEB"
