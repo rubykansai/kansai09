@@ -32,7 +32,7 @@
                 @Otsu Traditional Performing Arts Center
               </a>
             </div>
-            <div class="d-flex justify-center gap-4 mb-8 d-none d-md-flex">
+            <div class="justify-center gap-4 mb-8 d-none d-md-flex">
               <v-btn
                 size="large"
                 color="#87CEEB"
@@ -40,7 +40,7 @@
                 class="cta-button px-8"
                 disabled
               >
-                Call for Proposals
+                Call for Speakers
               </v-btn>
               <v-btn
                 size="large"
@@ -53,7 +53,7 @@
                 Call for Sponsors
               </v-btn>
             </div>
-            <div class="flex-column align-center gap-3 mb-8 d-flex d-md-none">
+            <div class="d-flex d-md-none flex-column align-center gap-3 mb-8">
               <v-btn
                 size="large"
                 color="#87CEEB"
@@ -61,7 +61,7 @@
                 class="cta-button px-8"
                 disabled
               >
-                Call for Proposals
+                Call for Speakers
               </v-btn>
               <v-btn
                 size="large"
