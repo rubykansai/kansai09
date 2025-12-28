@@ -32,28 +32,48 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
 .v-toolbar {
   background: transparent !important;
 }
 
-@media screen and (min-width:600px) {
-  .v-toolbar {
-    border-bottom: #fff solid 1px !important;
-  }
-}
-
 .v-navigation-drawer {
-  background-color: #041D4F !important;
+  background-color: #FFFFFF !important;
+  border-left: 2px solid #0A1C4C !important;
 }
 
-.v-list-item, a {
-  font-family: 'Kumbh Sans', serif;
-  color: #fff;
+.v-list {
+  padding-top: 2rem;
+}
+
+.v-list-item {
+  font-family: 'Questrial', sans-serif;
+  color: #0A1C4C !important;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  padding: 1.2rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.v-list-item:hover {
+  background-color: rgba(10, 28, 76, 0.05);
+  padding-left: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 button {
-  font-family: 'Kumbh Sans', serif;
-  color: #fff;
+  font-family: 'Questrial', sans-serif;
+  color: #0A1C4C;
+}
+
+.v-app-bar-nav-icon {
+  color: #0A1C4C !important;
 }
 
 </style>

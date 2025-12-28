@@ -1,8 +1,9 @@
 <template>
-  <v-app class="fill-height">
-    <AppHeader />
-    <v-row>
-      <v-col align="center" class="pb-0 mt-12">
+  <v-app class="app-container">
+    <AppHeaderIndex />
+    <v-container fluid class="main-content">
+      <v-row>
+        <v-col align="center" class="pb-0 mt-12">
         <v-card
           max-width="90vw"
           min-width="90vw"
@@ -12,11 +13,11 @@
           <v-card-item>
             <div align="left">
               <h1 class="text-h4 title align-center mb-10">
-                <span><v-img src="/dot.svg" :width="20" class="mr-2"/></span> ABOUT
+                <span><v-img src="/ruby.svg" :width="30" class="mr-2"/></span> ABOUT
               </h1>
 
               <div align="center">
-                <v-img src="/logo-blue.png" width="400px" class="mb-10"/>
+                <v-img src="/logo.png" width="300px" class="mb-10"/>
               </div>
               <p align="center" class="text-body-1 mb-10 mx-10">
                 関西Ruby会議は、関西で定期的に開催されているプログラミング言語Rubyに関する技術カンファレンスです。<br>
@@ -280,11 +281,11 @@
           <v-card-item>
             <div align="left">
               <h1 class="text-h4 title align-center mb-10">
-                <span><v-img src="/dot.svg" :width="20" class="mr-2"/></span> ABOUT
+                <span><v-img src="/ruby.svg" :width="20" class="mr-2"/></span> ABOUT
               </h1>
 
               <div align="center">
-                <v-img src="/logo-blue.png" width="400px" class="mb-10"/>
+                <v-img src="/logo.png" width="200px" class="mb-10"/>
               </div>
               <p align="center" class="text-body-1 mb-10 mx-5">
                 関西Ruby会議は、関西で定期的に開催されているプログラミング言語Rubyに関する技術カンファレンスです。<br>
@@ -488,8 +489,9 @@
           </v-card-item>
         </v-card>
         <Footer />
-      </v-col>
-    </v-row>
+        </v-col>
+      </v-row>
+    </v-container>
   </v-app>
 </template>
 
@@ -715,9 +717,21 @@ useSeoMeta({
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
 * {
-  font-family: 'Noto Sans JP';
+  font-family: 'Noto Sans JP', sans-serif;
   box-sizing: border-box;
+  color: #041D4F;
+}
+
+.app-container {
+  background-color: #ffffff !important;
+  border: 10px solid #0A1C4C;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .v-application {
@@ -727,6 +741,7 @@ useSeoMeta({
 
 .v-btn-contact {
   color: white !important;
+  font-family: 'Questrial', sans-serif;
 }
 
 .v-card-item {
@@ -741,16 +756,21 @@ useSeoMeta({
 .title {
   font-weight: 400;
   display: flex;
+  font-family: 'Questrial', sans-serif;
 }
 
 .text-h3, .text-h4 {
-  font-family: "Kumbh Sans";
+  font-family: 'Questrial', sans-serif;
   color: #041D4F;
   font-weight: 500;
 }
 
+.text-body-1 {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
 .text-body-2 {
-  font-family: "Kumbh Sans";
+  font-family: 'Questrial', sans-serif;
   font-weight: 600;
   color: #222222;
   font-size: 0.900rem !important;
@@ -789,6 +809,10 @@ useSeoMeta({
 
 .supporter-image {
   transition: all 0.3s ease;
+}
+
+a {
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 </style>

@@ -1,8 +1,9 @@
 <template>
-  <v-app class="fill-height">
-    <AppHeader />
-    <v-row>
-      <v-col align="center" class="pb-0 mt-12">
+  <v-app class="app-container">
+    <AppHeaderIndex />
+    <v-container fluid class="main-content">
+      <v-row>
+        <v-col align="center" class="pb-0 mt-12">
         <v-card
           max-width="90vw"
           min-width="90vw"
@@ -12,7 +13,7 @@
           <v-card-item>
             <div align="left">
               <h1 class="text-h4 title align-center mb-10">
-                <span><v-img src="/dot.svg" :width="20" class="mr-2"/></span> POLICIES
+                <span><v-img src="/ruby.svg" :width="30" class="mr-2"/></span> POLICIES
               </h1>
 
               <h2 align="center" class="text-h5 mb-10">
@@ -119,7 +120,7 @@
           <v-card-item>
             <div align="left">
               <h1 class="text-h4 title align-center mb-10">
-                <span><v-img src="/dot.svg" :width="20" class="mr-2"/></span> POLICIES
+                <span><v-img src="/ruby.svg" :width="20" class="mr-2"/></span> POLICIES
               </h1>
 
               <h2 align="center" class="text-h5 mb-10">
@@ -218,8 +219,9 @@
           </v-card-item>
         </v-card>
         <Footer />
-      </v-col>
-    </v-row>
+        </v-col>
+      </v-row>
+    </v-container>
   </v-app>
 </template>
 
@@ -233,9 +235,21 @@ useSeoMeta({
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
 * {
-  font-family: 'Noto Sans JP';
+  font-family: 'Noto Sans JP', sans-serif;
   box-sizing: border-box;
+  color: #041D4F;
+}
+
+.app-container {
+  background-color: #ffffff !important;
+  border: 10px solid #0A1C4C;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .v-application {
@@ -255,6 +269,7 @@ useSeoMeta({
 .title {
   font-weight: 400;
   display: flex;
+  font-family: 'Questrial', sans-serif;
 }
 
 .text-h4 {
@@ -273,6 +288,10 @@ useSeoMeta({
 
 .text-body-1 {
   line-height: 1.7;
-  font-family: "Noto Sans JP";
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+a {
+  font-family: 'Noto Sans JP', sans-serif;
 }
 </style>
