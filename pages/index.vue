@@ -99,12 +99,12 @@
               <div class="text-h5 tagline mb-6">
                 Mother Lake and Ruby
               </div>
-              <div class="text-h4 date-text mb-3">
-                2026.7.18 <span class="text-h5 date-day">(Sat)</span>
+              <div class="text-h4 date-text-mobile mb-3">
+                二〇二六年七月十八日
               </div>
               <div class="text-h5 venue-text mb-8">
                 <a class="venue-link" href="https://www.otsu-dengei.jp/" target="_blank">
-                  @Otsu Traditional Performing Arts Center
+                  ＠大津市伝統芸能会館
                 </a>
               </div>
             </div>
@@ -376,6 +376,12 @@
   letter-spacing: 0.05em;
 }
 
+.date-text-mobile {
+  font-family: 'Hina Mincho', serif;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+}
+
 .date-day {
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 400;
@@ -389,12 +395,12 @@
 
 .venue-link {
   color: #041D4F;
-  text-decoration: underline 1px;
-  transition: color 0.3s ease;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
 }
 
 .venue-link:hover {
-  color: #0A1C4C;
+  opacity: 0.7;
 }
 
 .cta-button {
@@ -450,16 +456,14 @@
 }
 
 @media (max-width: 768px) {
-  .text-h4.date-text {
+  .text-h4.date-text-mobile {
     font-size: 1.5rem !important;
   }
 
-  .text-h5.date-day {
-    font-size: 1.2rem !important;
-  }
-
   .text-h5.venue-text {
+    font-family: 'Hina Mincho', serif;
     font-size: 1.1rem !important;
+    letter-spacing: 0.1em;
   }
 
   .tagline {
