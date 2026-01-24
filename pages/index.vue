@@ -109,6 +109,9 @@
               </div>
             </div>
 
+            <div class="keynote-names d-none d-md-block">
+              <span class="keynote-label">基調講演：</span>成瀬ゆい (<a class="keynote-link" href="https://github.com/nurse" target="_blank" rel="noopener">@nurse</a>) / はすじょい (<a class="keynote-link" href="https://github.com/hsjoihs" target="_blank" rel="noopener">@hsjoihs</a>)
+            </div>
             <div class="justify-center gap-4 mb-8 d-none d-md-flex">
               <v-btn
                 size="large"
@@ -127,6 +130,9 @@
               >
                 Call for Sponsors
               </v-btn>
+            </div>
+            <div class="keynote-names d-md-none">
+              <span class="keynote-label">基調講演： </span>成瀬ゆい (<a class="keynote-link" href="https://github.com/nurse" target="_blank" rel="noopener">@nurse</a>) / はすじょい (<a class="keynote-link" href="https://github.com/hsjoihs" target="_blank" rel="noopener">@hsjoihs</a>)
             </div>
             <div class="d-flex d-md-none flex-column align-center gap-3 mb-8">
               <v-btn
@@ -198,6 +204,28 @@
 .pattern-desktop-5 { top: 8%; left: 55%; width: 100px; }
 .pattern-desktop-6 { top: 8%; left: 70%; width: 100px; }
 .pattern-desktop-7 { top: 8%; left: 85%; width: 100px; }
+
+.keynote-names {
+  font-family: 'Hina Mincho', sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  margin-top: -8px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.keynote-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .keynote-label {
+    display: block;
+    margin-bottom: 4px;
+  }
+}
 .pattern-desktop-8 { top: 20%; left: 2%; width: 100px; }
 .pattern-desktop-9 { top: 20%; left: 17%; width: 100px; }
 .pattern-desktop-10 { top: 20%; left: 32%; width: 100px; }
