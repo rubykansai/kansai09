@@ -95,10 +95,11 @@
             </div>
 
             <div class="d-block d-md-none">
-              <v-img src="/logo.png" width="20vh" class="mb-8"/>
-              <div class="text-h5 tagline mb-6">
-                Mother Lake and Ruby
+              <div class="mobile-tagline-container mb-6">
+                <span class="tagline-questrial">Mother Lake and Ruby</span>
+                <v-img src="/ruby.svg" width="20px" class="ruby-logo-mobile"/>
               </div>
+              <v-img src="/logo.png" width="20vh" class="mb-8"/>
               <div class="text-h4 date-text-mobile mb-3">
                 二〇二六年七月十八日
               </div>
@@ -461,6 +462,27 @@
   letter-spacing: 0.2em;
   color: #0A1C4C;
   font-size: 1.5rem !important;
+}
+
+.mobile-tagline-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.tagline-questrial {
+  font-family: 'Questrial', sans-serif;
+  font-size: 1.0rem;
+  letter-spacing: 0.15em;
+  color: #0A1C4C;
+}
+
+.ruby-logo-mobile {
+  flex-shrink: 0;
+  min-width: 20px;
+  max-width: 20px;
 }
 
 .message {
