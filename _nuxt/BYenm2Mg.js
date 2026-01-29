@@ -1,1 +1,0 @@
-import{_ as n,c as o,o as t,a as s}from"./jxopWQuP.js";const c={},_={align:"center",class:"mb-3"};function r(a,e){return t(),o("div",_,[...e[0]||(e[0]=[s("p",null,"関西Ruby会議09 ©2026",-1)])])}const i=n(c,[["render",r]]);export{i as _};
