@@ -129,7 +129,7 @@
                 href="https://esa-pages.io/p/sharing/22789/posts/19/b1085a24df458e23c0c1.html"
                 target="_blank"
               >
-                Call for Sponsors
+                Become a Sponsor
               </v-btn>
             </div>
             <div class="keynote-names d-md-none">
@@ -151,7 +151,7 @@
                 href="https://esa-pages.io/p/sharing/22789/posts/19/b1085a24df458e23c0c1.html"
                 target="_blank"
               >
-                Call for Sponsors
+                Become a Sponsor
               </v-btn>
             </div>
           </v-card-item>
