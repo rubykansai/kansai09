@@ -24,6 +24,7 @@ export default {
     drawer: false,
     pages: [
       { title: 'VENUE', to: 'https://www.otsu-dengei.jp/' },
+      { title: 'BLOG', to: 'https://note.com/kanrk' },
       { title: 'POLICIES', to: '/policies' },
       { title: 'ABOUT', to: '/about' },
     ],
