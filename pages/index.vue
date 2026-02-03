@@ -120,7 +120,7 @@
                 class="cta-button px-8"
                 disabled
               >
-                Call for Speakers
+                Register Now
               </v-btn>
               <v-btn
                 size="large"
@@ -142,7 +142,7 @@
                 class="cta-button px-8"
                 disabled
               >
-                Call for Speakers
+                Register Now
               </v-btn>
               <v-btn
                 size="large"
