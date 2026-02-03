@@ -116,16 +116,15 @@
             <div class="justify-center gap-4 mb-8 d-none d-md-flex">
               <v-btn
                 size="large"
-                color="#0A1C4C"
                 class="cta-button px-8"
-                disabled
+                href="https://ti.to/kansairubykaigi/09"
+                target="_blank"
               >
                 Register Now
               </v-btn>
               <v-btn
                 size="large"
-                color="#0A1C4C"
-                class="cta-button px-8"
+                class="cta-button cta-button--sponsor px-8"
                 href="https://esa-pages.io/p/sharing/22789/posts/19/b1085a24df458e23c0c1.html"
                 target="_blank"
               >
@@ -138,16 +137,15 @@
             <div class="d-flex d-md-none flex-column align-center gap-3 mb-8">
               <v-btn
                 size="large"
-                color="#0A1C4C"
                 class="cta-button px-8"
-                disabled
+                href="https://ti.to/kansairubykaigi/09"
+                target="_blank"
               >
                 Register Now
               </v-btn>
               <v-btn
                 size="large"
-                color="#0A1C4C"
-                class="cta-button px-8"
+                class="cta-button cta-button--sponsor px-8"
                 href="https://esa-pages.io/p/sharing/22789/posts/19/b1085a24df458e23c0c1.html"
                 target="_blank"
               >
@@ -434,11 +432,16 @@
 
 .cta-button {
   color: #ffffff !important;
+  background-color: #0A1C4C !important;
   font-family: 'Questrial', sans-serif;
   font-weight: 400;
   letter-spacing: 0.1em;
   transition: all 0.3s ease;
   border-radius: 0 !important;
+}
+
+.cta-button--sponsor {
+  background-color: #2652A8 !important;
 }
 
 .cta-button:hover {
