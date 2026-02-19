@@ -508,13 +508,6 @@ export default{
         image: 'https://avatars.githubusercontent.com/u/13041216',
       },
       {
-        name: 'hachi',
-        twitter: 'https://twitter.com/hachiblog',
-        github: 'https://github.com/hayaokimura',
-        role: 'Organizer',
-        image: 'https://avatars.githubusercontent.com/u/8371588',
-      },
-      {
         name: 'おごもり',
         twitter: 'https://twitter.com/ogomr',
         github: 'https://github.com/ogom',
@@ -589,11 +582,11 @@ export default{
         image: 'https://avatars.githubusercontent.com/u/11857',
       },
       {
-        name: 'toshima66',
-        twitter: 'https://twitter.com/toshima66',
-        github: 'https://github.com/toshima66',
+        name: 'haruguchi',
+        twitter: 'https://twitter.com/haruguchiyuma',
+        github: 'https://github.com/haruguchi-yuma',
         role: 'Organizer',
-        image: 'https://avatars.githubusercontent.com/u/904191',
+        image: 'https://avatars.githubusercontent.com/u/57053236',
       },
       {
         name: 'khori',
@@ -621,13 +614,6 @@ export default{
         github: 'https://github.com/masoo',
         role: 'Organizer',
         image: 'https://avatars.githubusercontent.com/u/2397400',
-      },
-      {
-        name: 'okeysea',
-        twitter: 'https://twitter.com/okeysea1',
-        github: 'https://github.com/okeysea',
-        role: 'Organizer',
-        image: 'https://avatars.githubusercontent.com/u/67820904',
       },
       {
         name: 'たろサ',
