@@ -124,7 +124,7 @@
               </v-btn>
               <v-btn
                 size="large"
-                class="cta-button px-8"
+                class="cta-button cta-button--cfp px-8"
                 href="https://forms.gle/hRjJabKiLXH5DreZ8"
                 target="_blank"
               >
@@ -153,7 +153,7 @@
               </v-btn>
               <v-btn
                 size="large"
-                class="cta-button px-8"
+                class="cta-button cta-button--cfp px-8"
                 href="https://forms.gle/hRjJabKiLXH5DreZ8"
                 target="_blank"
               >
@@ -449,6 +449,7 @@
 .cta-button {
   color: #ffffff !important;
   background-color: #0A1C4C !important;
+  border: 1px solid transparent !important;
   font-family: 'Questrial', sans-serif;
   font-weight: 400;
   letter-spacing: 0.1em;
@@ -456,14 +457,25 @@
   border-radius: 0 !important;
 }
 
+.cta-button--cfp {
+  color: #0A1C4C !important;
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-color: #0A1C4C !important;
+}
+
 .cta-button--sponsor {
-  background-color: #2652A8 !important;
+  background-color: #99ADC1 !important;
 }
 
 .cta-button:hover {
   opacity: 0.8;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(10, 28, 76, 0.4);
+}
+
+.cta-button--cfp:hover {
+  opacity: 1;
+  background-color: #EEF3FF !important;
 }
 
 .gap-3 {
