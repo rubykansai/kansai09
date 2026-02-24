@@ -113,7 +113,7 @@
             <div class="keynote-names d-none d-md-block">
               <span class="keynote-label">基調講演：</span>成瀬ゆい (<a class="keynote-link" href="https://github.com/nurse" target="_blank" rel="noopener">@nurse</a>) / はすじょい (<a class="keynote-link" href="https://github.com/hsjoihs" target="_blank" rel="noopener">@hsjoihs</a>)
             </div>
-            <div class="justify-center gap-4 mb-8 d-none d-md-flex">
+            <div class="justify-center flex-wrap gap-4 mb-8 d-none d-md-flex">
               <v-btn
                 size="large"
                 class="cta-button px-8"
@@ -121,6 +121,14 @@
                 target="_blank"
               >
                 Register Now
+              </v-btn>
+              <v-btn
+                size="large"
+                class="cta-button px-8"
+                href="https://forms.gle/hRjJabKiLXH5DreZ8"
+                target="_blank"
+              >
+                Call for Proposals
               </v-btn>
               <v-btn
                 size="large"
@@ -142,6 +150,14 @@
                 target="_blank"
               >
                 Register Now
+              </v-btn>
+              <v-btn
+                size="large"
+                class="cta-button px-8"
+                href="https://forms.gle/hRjJabKiLXH5DreZ8"
+                target="_blank"
+              >
+                Call for Proposals
               </v-btn>
               <v-btn
                 size="large"
