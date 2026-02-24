@@ -459,12 +459,13 @@
 
 .cta-button--cfp {
   color: #0A1C4C !important;
-  background-color: rgba(255, 255, 255, 0.92) !important;
-  border-color: #0A1C4C !important;
+  background-color: #99ADC1 !important;
 }
 
 .cta-button--sponsor {
-  background-color: #99ADC1 !important;
+  color: #0A1C4C !important;
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-color: #0A1C4C !important;
 }
 
 .cta-button:hover {
@@ -473,7 +474,7 @@
   box-shadow: 0 4px 12px rgba(10, 28, 76, 0.4);
 }
 
-.cta-button--cfp:hover {
+.cta-button--sponsor:hover {
   opacity: 1;
   background-color: #EEF3FF !important;
 }
