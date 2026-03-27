@@ -115,6 +115,7 @@
                           >
                             <v-img
                               :src="event.image"
+                              :aspect-ratio="3"
                               cover
                               class="event-image"
                             />
@@ -122,6 +123,7 @@
                           <v-img
                             v-else-if="event.image"
                             :src="event.image"
+                            :aspect-ratio="3"
                             cover
                             class="event-image"
                           />
@@ -462,7 +464,11 @@ const eventDays = [
     padding-top: 0;
   }
 
-  .event-image,
+  .event-image {
+    height: auto;
+    min-height: 0;
+  }
+
   .event-visual {
     min-height: 220px;
   }
