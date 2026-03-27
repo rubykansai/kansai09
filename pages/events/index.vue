@@ -187,6 +187,9 @@ useSeoMeta({
   ogDescription: '関西Ruby会議09の関連イベント情報を掲載しています。',
 })
 
+const { app: { baseURL } } = useRuntimeConfig()
+const withBaseURL = (path) => `${baseURL}${path.replace(/^\/+/, '')}`
+
 const eventDays = [
   {
     day: 'Day0',
@@ -195,7 +198,7 @@ const eventDays = [
     events: [
       {
         name: '関西Ruby会議09 前夜祭',
-        image: '/events/preparty.png',
+        image: withBaseURL('/events/preparty.png'),
         time: 'July 17, 18:30 - 20:30',
         place: '下田屋',
         price: '¥6,000',
@@ -215,7 +218,7 @@ const eventDays = [
       {
         name: '関西Ruby会議09 Official Party',
         url: 'https://rubykansai.doorkeeper.jp/events/196021',
-        image: '/events/officialparty.png',
+        image: withBaseURL('/events/officialparty.png'),
         time: 'July 18, 19:00 - 21:00',
         place: 'THE CALENDAR',
         price: '¥5,000',
