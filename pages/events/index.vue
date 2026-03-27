@@ -77,7 +77,7 @@
                                 rounded
                                 class="event-btn"
                               >
-                                {{ event.buttonLabel || 'REGISTRATION' }}
+                                {{ getButtonLabel(event) }}
                               </v-btn>
                             </a>
                           </div>
@@ -88,7 +88,7 @@
                               class="event-btn"
                               disabled
                             >
-                              {{ event.buttonLabel || 'REGISTRATION' }}
+                              {{ getButtonLabel(event) }}
                             </v-btn>
                           </div>
 
@@ -191,6 +191,11 @@ useSeoMeta({
 
 const { app: { baseURL } } = useRuntimeConfig()
 const withBaseURL = (path) => `${baseURL}${path.replace(/^\/+/, '')}`
+const getButtonLabel = (event) => (
+  event.buttonDisabled && event.buttonLabel === 'REGISTRATION'
+    ? 'COMING SOON'
+    : event.buttonLabel || 'REGISTRATION'
+)
 
 const eventDays = [
   {
