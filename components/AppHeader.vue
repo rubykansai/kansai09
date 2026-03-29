@@ -28,6 +28,7 @@ export default {
       { title: 'EVENTS', to: '/events' },
       { title: 'POLICIES', to: '/policies' },
       { title: 'ABOUT', to: '/about' },
+      { title: 'GOODIES', to: '/goodies' },
     ],
   }),
 }
