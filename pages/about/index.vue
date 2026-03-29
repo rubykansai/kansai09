@@ -682,6 +682,7 @@ export default{
       { name: 'Ruby舞鶴', link: 'https://ruby-maizuru.connpass.com/', image: '/kansai09/communities/rubymaizuru.png' },
       { name: 'Ruby Tuesday', link: 'https://ruby-tuesday.doorkeeper.jp/', image: '/kansai09/communities/rubytuesday.png' },
       { name: 'Shinosaka.rb', link: 'https://shinosakarb.doorkeeper.jp/', image: '/kansai09/communities/shinosaka.png' },
+      { name: 'Umeda.rb', link: 'https://umedarb.connpass.com/', image: '/kansai09/communities/umeda.png' },
       { name: 'Wakayama.rb', link: 'https://wakayama-rb.connpass.com/', image: '/kansai09/communities/wakayama.png' },
     ],
     supporter: {
