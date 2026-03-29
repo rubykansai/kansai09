@@ -3,14 +3,14 @@
     <v-app-bar :elevation="0">
       <v-app-bar-nav-icon class="d-flex d-md-none" variant="text" @click.stop="drawer = !drawer" />
       <template #append>
-        <NuxtLink v-for="(page, index) in pages" :key="index" class="d-none d-md-block" :to="page.to">
+        <NuxtLink v-for="(page, index) in visiblePages" :key="index" class="d-none d-md-block" :to="page.to">
           <v-btn>{{ page.title }}</v-btn>
         </NuxtLink>
       </template>
     </v-app-bar>
     <v-navigation-drawer v-model="drawer">
       <v-list>
-        <NuxtLink v-for="(page, index) in pages" :key="index" :to="page.to">
+        <NuxtLink v-for="(page, index) in visiblePages" :key="index" :to="page.to">
           <v-list-item>{{ page.title }}</v-list-item>
         </NuxtLink>
       </v-list>
@@ -23,6 +23,7 @@ export default {
   data: () => ({
     drawer: false,
     pages: [
+      { title: 'HOME', to: '/' },
       { title: 'VENUE', to: 'https://www.otsu-dengei.jp/' },
       { title: 'BLOG', to: 'https://note.com/kanrk' },
       { title: 'EVENTS', to: '/events' },
@@ -31,6 +32,15 @@ export default {
       { title: 'GOODIES', to: '/goodies' },
     ],
   }),
+  computed: {
+    visiblePages() {
+      if (this.$route.path === '/') {
+        return this.pages.filter((page) => page.to !== '/')
+      }
+
+      return this.pages
+    },
+  },
 }
 </script>
 
