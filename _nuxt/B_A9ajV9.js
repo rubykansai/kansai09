@@ -1,0 +1,1 @@
+import{h as s,i as u,j as r,k as o,l as i,m as c}from"./DW23UCWL.js";function a(t){const e=t||u();return e?.ssrContext?.head||e?.runWithContext(()=>{if(r())return o(i)})}function d(t,e={}){const n=a(e.nuxt);if(n)return c(t,{head:n,...e})}function f(t,e={}){const n=a(e.nuxt);if(n)return s(t,{head:n,...e})}export{f as a,d as u};
