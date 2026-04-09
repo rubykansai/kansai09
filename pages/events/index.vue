@@ -205,15 +205,15 @@ const eventDays = [
     events: [
       {
         name: '関西Ruby会議09 前夜祭',
+        url: 'https://kyotorb.connpass.com/event/388788/',
         image: withBaseURL('/events/preparty.png'),
         time: 'July 17, 18:30 - 20:30',
-        place: '下田屋',
+        place: '下田屋（しもたや）',
         price: '¥6,000',
         sponsorPrefix: 'hosted by',
         sponsored: 'Kyoto.rb',
         sponsoredUrl: 'https://kyotorb.connpass.com/',
         buttonLabel: 'REGISTRATION',
-        buttonDisabled: true,
       },
     ],
   },
