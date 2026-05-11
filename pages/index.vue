@@ -124,14 +124,6 @@
               </v-btn>
               <v-btn
                 size="large"
-                class="cta-button cta-button--cfp px-8"
-                href="https://forms.gle/hRjJabKiLXH5DreZ8"
-                target="_blank"
-              >
-                Call for Proposals
-              </v-btn>
-              <v-btn
-                size="large"
                 class="cta-button cta-button--sponsor px-8"
                 href="https://esa-pages.io/p/sharing/22789/posts/19/b1085a24df458e23c0c1.html"
                 target="_blank"
@@ -150,14 +142,6 @@
                 target="_blank"
               >
                 Register Now
-              </v-btn>
-              <v-btn
-                size="large"
-                class="cta-button cta-button--cfp px-8"
-                href="https://forms.gle/hRjJabKiLXH5DreZ8"
-                target="_blank"
-              >
-                Call for Proposals
               </v-btn>
               <v-btn
                 size="large"
@@ -455,11 +439,6 @@
   letter-spacing: 0.1em;
   transition: all 0.3s ease;
   border-radius: 0 !important;
-}
-
-.cta-button--cfp {
-  color: #0A1C4C !important;
-  background-color: #99ADC1 !important;
 }
 
 .cta-button--sponsor {

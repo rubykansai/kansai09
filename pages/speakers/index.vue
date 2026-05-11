@@ -77,13 +77,7 @@
                   SPEAKERS
                 </h2>
                 <p class="text-body-1 section-copy mb-10">
-                  公募スピーカーは準備ができ次第、このページで公開します。
-                  <a
-                    :href="cfpUrl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="section-link"
-                  >現在、発表は募集中です。</a>
+                  公募スピーカーの募集は終了しました。結果の発表まで今しばらくお待ちください。
                 </p>
               </div>
             </v-card-item>
@@ -105,7 +99,6 @@ useSeoMeta({
 
 const { app: { baseURL } } = useRuntimeConfig()
 const withBaseURL = (path) => `${baseURL}${path.replace(/^\/+/, '')}`
-const cfpUrl = 'https://forms.gle/nMd9nwQcwomn5YtAA'
 
 const keynoteSpeakers = [
   {
