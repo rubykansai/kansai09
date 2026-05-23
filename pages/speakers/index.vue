@@ -18,67 +18,70 @@
                   SPEAKERS
                 </h1>
 
-                <h2 class="text-h5 section-title mb-10">
-                  KEYNOTE SPEAKERS
-                </h2>
-                <v-row class="justify-space-between mb-12">
-                  <v-col
-                    v-for="speaker in keynoteSpeakers"
-                    :key="speaker.name"
-                    cols="12"
-                    md="6"
+                <section
+                  v-for="section in speakerSections"
+                  :key="section.title"
+                >
+                  <h2
+                    class="text-h5 section-title"
+                    :class="section.headingClass"
                   >
-                    <v-card
-                      class="speaker-card speaker-card--keynote px-md-3 py-md-3 px-0 py-0"
-                      align="center"
-                      :elevation="0"
+                    {{ section.title }}
+                  </h2>
+                  <v-row :class="section.rowClass">
+                    <v-col
+                      v-for="speaker in section.speakers"
+                      :key="speaker.id ?? speaker.name"
+                      cols="12"
+                      :sm="section.sm"
+                      :md="section.md"
                     >
-                      <div class="speaker-card__inner py-2 px-2">
-                        <v-img
-                          :src="speaker.image"
-                          :alt="speaker.name"
-                          max-height="10rem"
-                          max-width="10rem"
-                          cover
-                          class="speaker-avatar"
-                        />
-                        <v-card-title class="speaker-name px-0">
-                          {{ speaker.name }}
-                        </v-card-title>
-                        <div class="d-flex justify-center mb-4">
-                          <a
-                            v-for="social in speaker.socials"
-                            :key="social.label"
-                            :href="social.href"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <v-btn
-                              class="mx-2"
-                              :icon="social.icon"
-                              flat
-                              :aria-label="social.label"
-                              :title="social.label"
-                            />
-                          </a>
+                      <v-card
+                        class="speaker-card px-md-3 py-md-3 px-0 py-0"
+                        :class="section.cardClass"
+                        align="center"
+                        :elevation="0"
+                      >
+                        <div class="speaker-card__inner py-2 px-2">
+                          <v-img
+                            :src="speaker.image"
+                            :alt="speaker.name"
+                            max-height="10rem"
+                            max-width="10rem"
+                            cover
+                            class="speaker-avatar"
+                          />
+                          <v-card-title class="speaker-name px-0">
+                            {{ speaker.name }}
+                          </v-card-title>
+                          <div class="d-flex justify-center mb-4">
+                            <a
+                              v-for="social in speaker.socials"
+                              :key="social.label"
+                              :href="social.href"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <v-btn
+                                class="mx-2"
+                                :icon="social.icon"
+                                flat
+                                :aria-label="social.label"
+                                :title="social.label"
+                              />
+                            </a>
+                          </div>
+                          <div align="left">
+                            <p class="text-body-2 speaker-description mt-2 mb-0">
+                              {{ speaker.description }}
+                            </p>
+                          </div>
                         </div>
-                        <div align="left">
-                          <p class="text-body-2 speaker-description mt-2 mb-0">
-                            {{ speaker.description }}
-                          </p>
-                        </div>
-                      </div>
-                    </v-card>
-                    <v-divider class="speaker-divider mx-2 d-md-none" color="#0A1C4C" />
-                  </v-col>
-                </v-row>
-
-                <h2 class="text-h5 section-title mb-3">
-                  SPEAKERS
-                </h2>
-                <p class="text-body-1 section-copy mb-10">
-                  公募スピーカーの募集は終了しました。結果の発表まで今しばらくお待ちください。
-                </p>
+                      </v-card>
+                      <v-divider class="speaker-divider mx-2 d-md-none" color="#0A1C4C" />
+                    </v-col>
+                  </v-row>
+                </section>
               </div>
             </v-card-item>
           </v-card>
@@ -90,6 +93,8 @@
 </template>
 
 <script setup>
+import { keynoteSpeakers, speakers } from '~/data/speakers'
+
 useSeoMeta({
   title: 'Speakers - 関西Ruby会議09',
   ogTitle: 'Speakers - 関西Ruby会議09',
@@ -100,24 +105,22 @@ useSeoMeta({
 const { app: { baseURL } } = useRuntimeConfig()
 const withBaseURL = (path) => `${baseURL}${path.replace(/^\/+/, '')}`
 
-const keynoteSpeakers = [
+const speakerSections = [
   {
-    name: '成瀬ゆい (@nurse)',
-    image: 'https://github.com/nurse.png?size=400',
-    description: 'Rubyコミッター、リリースマネージャー。nkfメンテナー。Rubyでは文字コードを中心にいろいろいじったり、Rubyのリリースをしたりしています。仕事はさくらインターネットでプロダクトマネージャー。',
-    socials: [
-      { label: 'X profile for @nalsh', href: 'https://x.com/nalsh', icon: 'mdi-twitter' },
-      { label: 'GitHub profile for @nurse', href: 'https://github.com/nurse', icon: 'mdi-github' },
-    ],
+    title: 'KEYNOTE SPEAKERS',
+    speakers: keynoteSpeakers,
+    md: 6,
+    rowClass: 'justify-space-between mb-12',
+    cardClass: 'speaker-card--keynote',
+    headingClass: 'mb-10',
   },
   {
-    name: 'はすじょい (@hsjoihs)',
-    image: 'https://github.com/hsjoihs.png?size=400',
-    description: 'セキュリティ・キャンプ\'18受講生, \'20チューター, \'21ネクスト受講生, \'22-\'25講師；東大既仏→Stanford 学部（数学・物理学）・修士（応用・工学物理学）卒業；NandGame和訳；ZEN大学教員「オートマトンと形式言語理論」「論理回路概論」',
-    socials: [
-      { label: 'X profile for @hsjoihs', href: 'https://x.com/hsjoihs', icon: 'mdi-twitter' },
-      { label: 'GitHub profile for @hsjoihs', href: 'https://github.com/hsjoihs', icon: 'mdi-github' },
-    ],
+    title: 'SPEAKERS',
+    speakers,
+    sm: 6,
+    md: 4,
+    rowClass: 'justify-center',
+    headingClass: 'mb-10',
   },
 ]
 
@@ -163,23 +166,13 @@ const keynoteSpeakers = [
   font-weight: 500;
 }
 
-.section-title,
-.speakers-intro,
-.section-copy {
+.section-title {
   text-align: center;
 }
 
-.speakers-intro,
-.section-copy,
 .speaker-description {
   line-height: 1.9;
   color: #22365F;
-}
-
-.speakers-intro,
-.section-copy {
-  max-width: 56rem;
-  margin-inline: auto;
 }
 
 .speaker-card {
@@ -218,20 +211,11 @@ const keynoteSpeakers = [
 
 .speaker-description {
   min-height: 6rem;
+  white-space: pre-line;
 }
 
 .speaker-divider {
   opacity: 1;
-}
-
-.section-link {
-  color: #041D4F;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.section-link:hover {
-  opacity: 0.7;
 }
 
 a {
