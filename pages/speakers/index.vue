@@ -12,7 +12,7 @@
           >
             <v-card-item>
               <div class="page-content">
-                <h1 class="text-h4 title justify-center mb-10">
+                <h1 class="text-h4 title align-center justify-center mb-10">
                   <span><v-img :src="withBaseURL('/ruby.svg')" :width="30" class="mr-2 d-none d-md-flex" /></span>
                   <span><v-img :src="withBaseURL('/ruby.svg')" :width="20" class="mr-2 d-flex d-md-none" /></span>
                   SPEAKERS
