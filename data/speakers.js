@@ -24,7 +24,7 @@ const regularSpeakers = [
     id: '4geru',
     name: 'しげる。',
     image: 'https://github.com/4geru.png?size=400',
-    description: '彦根在住の Rubyist です。LINE API の楽しさを広める活動中。OSS 活動の中で MCP の開発にも携わりました。AI と共に開発する日々を楽しんでいます。',
+    description: '彦根在住の Rubyist です。マネーフォワードで、営業生産性向上のお仕事をしています。課外活動で、LINE API の楽しさを広める活動中。OSS 活動の中で MCP の開発にも携わり、AI と共に開発する日々を楽しんでいます。',
     socials: [
       { label: 'X profile for @_4geru', href: 'https://x.com/_4geru', icon: 'mdi-twitter' },
       { label: 'GitHub profile for @4geru', href: 'https://github.com/4geru', icon: 'mdi-github' },
