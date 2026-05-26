@@ -34,7 +34,9 @@ const regularSpeakers = [
     id: 'aim2bpg',
     name: 'shimokawa (@aim2bpg)',
     image: 'https://github.com/aim2bpg.png?size=400',
-    description: 'フィヨルドブートキャンプでRubyを学び、Webエンジニアとしてのキャリアをスタートしました。現在はRuby製OSSとして、正規表現エディタ「Rubree」を開発・運用しています。Rubreeは正規表現をレールロード図として可視化するツールで、Ruby Weekly #777に掲載されました。RubyKaigi 2026でNarakuプロジェクトに触れたことをきっかけに、Rubyの正規表現エンジンやOnigmoの内部実装に興味を持ち、実際に動かしながら理解を深めています。',
+    description: `佐賀発のAI・医療DXを提供する木村情報技術のSRE部で、AWSを中心としたIaC・Docker・CI/CD基盤の構築運用やAIエージェントを活用した運用改善に取り組んでいます。
+
+フィヨルドブートキャンプでRubyを学び、卒業課題として開発した正規表現エディタ「Rubree」を現在も開発・運用しています。Ruby Weekly #777でも紹介されました。`,
     socials: [
       { label: 'X profile for @aim2bpg', href: 'https://x.com/aim2bpg', icon: 'mdi-twitter' },
       { label: 'GitHub profile for @aim2bpg', href: 'https://github.com/aim2bpg', icon: 'mdi-github' },
