@@ -212,6 +212,18 @@ const eventDays = [
         sponsoredUrl: 'https://kyotorb.connpass.com/',
         buttonLabel: 'REGISTRATION',
       },
+      {
+        name: '関西Ruby会議09 前夜祭 Welcome Beer Bash!!',
+        url: 'https://kyobashirb.connpass.com/event/396176/',
+        image: withBaseURL('/events/beerbash.png'),
+        time: 'July 17, 18:30 - 20:30',
+        place: 'craft beer house B.B',
+        price: '¥6,000 (仮)',
+        sponsorPrefix: 'hosted by',
+        sponsored: 'Kyobashi.rb',
+        sponsoredUrl: 'https://kyobashirb.connpass.com/',
+        buttonLabel: 'REGISTRATION',
+      },
     ],
   },
   {
