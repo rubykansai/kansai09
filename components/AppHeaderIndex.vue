@@ -33,12 +33,12 @@ export default {
   data: () => ({
     drawer: false,
     pages: [
-      { title: 'VENUE', to: 'https://www.otsu-dengei.jp/' },
-      { title: 'BLOG', to: 'https://note.com/kanrk' },
-      { title: 'EVENTS', to: '/events' },
       { title: 'SPEAKERS', to: '/speakers' },
+      { title: 'EVENTS', to: '/events' },
+      { title: 'BLOG', to: 'https://note.com/kanrk' },
       { title: 'SPONSORS', to: '/sponsors' },
       { title: 'JOBS', to: '/jobs' },
+      { title: 'VENUE', to: 'https://www.otsu-dengei.jp/' },
       { title: 'POLICIES', to: '/policies' },
       { title: 'ABOUT', to: '/about' },
       { title: 'GOODIES', to: '/goodies' },
