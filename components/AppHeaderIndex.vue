@@ -37,6 +37,7 @@ export default {
       { title: 'BLOG', to: 'https://note.com/kanrk' },
       { title: 'EVENTS', to: '/events' },
       { title: 'SPEAKERS', to: '/speakers' },
+      { title: 'SPONSORS', to: '/sponsors' },
       { title: 'POLICIES', to: '/policies' },
       { title: 'ABOUT', to: '/about' },
       { title: 'GOODIES', to: '/goodies' },
