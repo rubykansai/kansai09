@@ -38,6 +38,7 @@ export default {
       { title: 'EVENTS', to: '/events' },
       { title: 'SPEAKERS', to: '/speakers' },
       { title: 'SPONSORS', to: '/sponsors' },
+      { title: 'JOBS', to: '/jobs' },
       { title: 'POLICIES', to: '/policies' },
       { title: 'ABOUT', to: '/about' },
       { title: 'GOODIES', to: '/goodies' },
