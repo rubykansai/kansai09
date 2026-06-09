@@ -38,7 +38,7 @@ export default {
       { title: 'BLOG', to: 'https://note.com/kanrk' },
       { title: 'SPONSORS', to: '/sponsors' },
       { title: 'JOBS', to: '/jobs' },
-      { title: 'VENUE', to: 'https://www.otsu-dengei.jp/' },
+      { title: 'VENUE', to: '/venue' },
       { title: 'POLICIES', to: '/policies' },
       { title: 'ABOUT', to: '/about' },
       { title: 'GOODIES', to: '/goodies' },
