@@ -164,6 +164,12 @@ export default {
         description: '決済ドメインの複雑な課題をRubyで解く。設計・技術選定に深く関われるシニアバックエンドエンジニアを募集しています。',
         image: '/sponsors/netprotections.png',
       },
+      {
+        name: 'ポノス株式会社',
+        url: 'https://www.ponos.jp/recruit/mid/Recruitment/%e3%82%b5%e3%83%bc%e3%83%90%e3%83%bc%e3%82%b5%e3%82%a4%e3%83%89%e3%82%a8%e3%83%b3%e3%82%b8%e3%83%8b%e3%82%a2/',
+        description: '13年以上運営中の代表タイトル「にゃんこ大戦争」は、累計1億1111万DLを突破！モバイルゲームのサーバー開発に参画いただける仲間を募集中です！',
+        image: '/sponsors/ponos.png',
+      },
     ].map(normalizeJobLinks),
   }),
 }
