@@ -1,5 +1,6 @@
 export const keynoteSpeakers = [
   {
+    id: 'nurse',
     name: '成瀬ゆい (@nurse)',
     image: 'https://github.com/nurse.png?size=400',
     description: 'Rubyコミッター、リリースマネージャー。nkfメンテナー。Rubyでは文字コードを中心にいろいろいじったり、Rubyのリリースをしたりしています。仕事はさくらインターネットでプロダクトマネージャー。',
@@ -9,6 +10,7 @@ export const keynoteSpeakers = [
     ],
   },
   {
+    id: 'hsjoihs',
     name: 'はすじょい (@hsjoihs)',
     image: 'https://github.com/hsjoihs.png?size=400',
     description: 'セキュリティ・キャンプ\'18受講生, \'20チューター, \'21ネクスト受講生, \'22-\'25講師；東大既仏→Stanford 学部（数学・物理学）・修士（応用・工学物理学）卒業；NandGame和訳；ZEN大学教員「オートマトンと形式言語理論」「論理回路概論」',

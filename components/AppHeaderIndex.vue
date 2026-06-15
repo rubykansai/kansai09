@@ -34,6 +34,7 @@ export default {
     drawer: false,
     pages: [
       { title: 'SPEAKERS', to: '/speakers' },
+      { title: 'SCHEDULE', to: '/schedule' },
       { title: 'EVENTS', to: '/events' },
       { title: 'BLOG', to: 'https://note.com/kanrk' },
       { title: 'SPONSORS', to: '/sponsors' },

@@ -11,7 +11,7 @@
             :elevation="0"
           >
             <v-card-item>
-              <h1 class="text-h4 title align-center justify-center mb-10">
+              <h1 class="text-h4 title align-center mb-10">
                 <span><v-img :src="withBaseURL('/ruby.svg')" :width="30" class="mr-2 d-none d-md-flex" alt="" /></span>
                 <span><v-img :src="withBaseURL('/ruby.svg')" :width="20" class="mr-2 d-flex d-md-none" alt="" /></span>
                 JOBS
