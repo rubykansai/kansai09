@@ -159,6 +159,12 @@ export default {
         image: '/sponsors/leaner.png',
       },
       {
+        name: '株式会社Ruby開発',
+        url: 'https://www.ruby-dev.jp/recruit_lp',
+        description: 'RubyとAIで未来を切り拓く。挑戦者を募集中。私たちと一緒に、Ruby×AIでワクワクする未来を創造しませんか？',
+        image: '/sponsors/rubydevelopment.jpg',
+      },
+      {
         name: '株式会社ネットプロテクションズ',
         url: 'https://hrmos.co/pages/netprotections/jobs/51001005',
         description: '決済ドメインの複雑な課題をRubyで解く。設計・技術選定に深く関われるシニアバックエンドエンジニアを募集しています。',

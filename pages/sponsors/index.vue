@@ -206,6 +206,12 @@ export default {
     ],
     silver: [
       {
+        name: '株式会社Ruby開発',
+        url: 'https://www.ruby-dev.jp/',
+        description: '株式会社Ruby開発は、Rubyをコア技術としたWebサービス開発のプロフェッショナル集団です。RubyCommitterが2名在籍し、高い技術力と豊富な開発実績を誇ります。AIとRubyを組み合わせ、革新的なサービスの創造を目指します。',
+        image: '/sponsors/rubydevelopment.jpg',
+      },
+      {
         name: '株式会社SmartHR',
         url: 'https://smarthr.co.jp/',
         description: 'SmartHRは、クラウド人事労務ソフトです。「worker-friendly 働くみんなが使いやすい」というビジョンのもと、企業の生産性を向上し、誰もがその人らしく働ける環境づくりに貢献します。',
