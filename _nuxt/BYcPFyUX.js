@@ -1,4 +1,4 @@
-import{k as s,s as a}from"./jmU4ISgN.js";const r=[...s,...a],n=Object.fromEntries(r.map(e=>[e.id,e])),t=e=>{const o=n[e];if(!o)throw new Error(`Speaker not found: ${e}`);return o},i=[{id:"nurse",type:"keynote",title:"Keynote",speaker:t("nurse"),abstract:"詳細は後日公開します。"},{id:"harukasan",type:"session",title:"「照らす技術」をRubyで照らす",speaker:t("harukasan"),abstract:`ステージを華やかに彩る照明や、演者の影でせわしなく動き回るムービングライト。これらを裏側で制御する共通言語が「DMX512」という通信プロトコルです。本セッションでは、ふだん裏方に徹している「ステージを照らす技術」にスポットライトを当て、そのプロトコルの実装を紹介します。
+import{k as o,s as a}from"./jmU4ISgN.js";const r=[...o,...a],n=Object.fromEntries(r.map(e=>[e.id,e])),t=e=>{const s=n[e];if(!s)throw new Error(`Speaker not found: ${e}`);return s},i=[{id:"nurse",type:"keynote",title:"Keynote",speaker:t("nurse"),abstract:"詳細は後日公開します。"},{id:"harukasan",type:"session",title:"「照らす技術」をRubyで照らす",speaker:t("harukasan"),abstract:`ステージを華やかに彩る照明や、演者の影でせわしなく動き回るムービングライト。これらを裏側で制御する共通言語が「DMX512」という通信プロトコルです。本セッションでは、ふだん裏方に徹している「ステージを照らす技術」にスポットライトを当て、そのプロトコルの実装を紹介します。
 
 具体的には、PicoRubyを用いてRubyスクリプトでDMX512-A信号を生成し、ムービングライトと直接通信する手法を取り上げます。普段触れる機会の少ない業務用プロトコルの実装を通して、その技術的仕様の裏側にどのような仕組みがあるのかを紐解いていきます。
 
@@ -48,22 +48,7 @@ Rails を触ったことがある方なら、すぐに試せる内容です。Ra
 本セッションでは、
 ・古典的な概念をどうデータ構造へ落とし込んだか
 ・曖昧な概念である占いをどうソフトウェアとして扱ったか
-を、実際のコードとともに紹介します。`},{id:"yhara",type:"session",title:"GCの気持ち考えたことある？",speaker:t("yhara"),abstract:`Ruby処理系にとって欠かせない構成要素であるにもかかわらず、日ごろあまり顧みられることのないGC。本トークではそんなGCに光をあてます。Ruby 3.4から導入されたModular GC機能を用いてカスタムのGCを作成し、最終的にGCの苦労を体験可能にします。
-
-最近のCRubyに入っているGCのアルゴリズムを切り替えられる機構を使って、GC状況を可視化するデモを作ってみたのでその話をします。
-
-・初級者に向けて
-　・GCとは何をするものか
-・中級者に向けて
-　・最近のCRubyはGC部分だけを切り替えることができるよ
-・上級者に向けて
-　・Modular GCとは・mmTkとは
-　・Modular GCでできること、できないこと
-　・Modular GC機能の試し方
-　・GC中は意外と何やってもいい（デモ：raylibを使ってGCの管理するメモリ状況を可視化）
-・その他考えているデモ
-　・GCを"体験"するゲーム（ボタンを押した回数だけメモリを解放できるとか）
-　　・メモリがいっぱいになるまでに一番長く円周率を計算できた人が勝ち`},{id:"yujiyokoo",type:"session",title:"VMとAOTコンパイラ開発で照らす8Bit機の世界",speaker:t("yujiyokoo"),abstract:`Z80という8Bit CPU向けのmruby VMを実装しています。
+を、実際のコードとともに紹介します。`},{id:"yhara",type:"session",title:"GCの気持ち考えたことある？",speaker:t("yhara"),abstract:"Ruby処理系にとって欠かせない構成要素であるにもかかわらず、日ごろあまり顧みられることのないGC。本トークではそんなGCに光をあてます。Ruby 3.4から導入されたModular GC機能を用いてカスタムのGCを作成し、最終的にGCの苦労を体験可能にします。"},{id:"yujiyokoo",type:"session",title:"VMとAOTコンパイラ開発で照らす8Bit機の世界",speaker:t("yujiyokoo"),abstract:`Z80という8Bit CPU向けのmruby VMを実装しています。
 現段階ではセガのマスターシステムのみをサポートして、サポートするプラットフォームは今後拡大予定ですが、若干手間取っております。
 
 今は最近の流行に乗ってVMとは対照的なアプローチであるAOTコンパイラをコーディングエージェントに開発してもらっています。
