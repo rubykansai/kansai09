@@ -113,11 +113,9 @@ if (!presentation) {
   })
 }
 
-useSeoMeta({
+usePageSeo({
   title: `${presentation.title} - 関西Ruby会議09`,
-  ogTitle: `${presentation.title} - 関西Ruby会議09`,
   description: `${presentation.speaker.name}による「${presentation.title}」の発表概要です。`,
-  ogDescription: `${presentation.speaker.name}による「${presentation.title}」の発表概要です。`,
 })
 
 const { app: { baseURL } } = useRuntimeConfig()

@@ -95,11 +95,9 @@
 <script setup>
 import { keynoteSpeakers, speakers } from '~/data/speakers'
 
-useSeoMeta({
+usePageSeo({
   title: 'Speakers - 関西Ruby会議09',
-  ogTitle: 'Speakers - 関西Ruby会議09',
   description: '関西Ruby会議09のスピーカー情報を掲載しています。',
-  ogDescription: '関西Ruby会議09のスピーカー情報を掲載しています。',
 })
 
 const { app: { baseURL } } = useRuntimeConfig()

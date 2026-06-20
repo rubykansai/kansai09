@@ -160,6 +160,10 @@
   </v-app>
 </template>
 
+<script setup>
+usePageSeo()
+</script>
+
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Questrial&family=Hina+Mincho&display=swap');
 

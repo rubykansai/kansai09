@@ -695,11 +695,9 @@ export default{
 </script>
 
 <script setup>
-useSeoMeta({
+usePageSeo({
   title: 'About - 関西Ruby会議09',
-  ogTitle: 'About - 関西Ruby会議09',
   description: '関西Ruby会議の概要とチームメンバーを紹介します。',
-  ogDescription: '関西Ruby会議の概要とチームメンバーを紹介します。',
 })
 </script>
 

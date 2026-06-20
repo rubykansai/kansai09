@@ -87,30 +87,9 @@
 <script setup>
 import { scheduleItems } from '~/data/schedule'
 
-const pageTitle = 'Schedule - 関西Ruby会議09'
-const pageDescription = '関西Ruby会議09のスケジュールです。'
-const pageUrl = 'https://regional.rubykaigi.org/kansai09/schedule/'
-const ogImage = 'https://regional.rubykaigi.org/kansai09/ogp.png'
-
-useSeoMeta({
-  title: pageTitle,
-  description: pageDescription,
-  ogTitle: pageTitle,
-  ogDescription: pageDescription,
-  ogUrl: pageUrl,
-  ogImage,
-  ogImageWidth: '1200',
-  ogImageHeight: '630',
-  twitterTitle: pageTitle,
-  twitterDescription: pageDescription,
-  twitterCard: 'summary_large_image',
-  twitterImage: ogImage,
-})
-
-useHead({
-  link: [
-    { rel: 'canonical', href: pageUrl },
-  ],
+usePageSeo({
+  title: 'Schedule - 関西Ruby会議09',
+  description: '関西Ruby会議09のスケジュールです。',
 })
 
 const { app: { baseURL } } = useRuntimeConfig()

@@ -87,11 +87,9 @@
 </template>
 
 <script setup>
-useSeoMeta({
+usePageSeo({
   title: 'Jobs - 関西Ruby会議09',
-  ogTitle: 'Jobs - 関西Ruby会議09',
   description: '関西Ruby会議09のスポンサー企業様の求人情報を掲載しています。',
-  ogDescription: '関西Ruby会議09のスポンサー企業様の求人情報を掲載しています。',
 })
 
 const { app: { baseURL } } = useRuntimeConfig()

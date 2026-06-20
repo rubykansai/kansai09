@@ -226,11 +226,9 @@
 </template>
 
 <script setup>
-useSeoMeta({
+usePageSeo({
   title: 'Policies - 関西Ruby会議09',
-  ogTitle: 'Policies - 関西Ruby会議09',
   description: '関西Ruby会議09のアンチハラスメントポリシーです。',
-  ogDescription: '関西Ruby会議09のアンチハラスメントポリシーです。',
 })
 </script>
 
