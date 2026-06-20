@@ -203,14 +203,14 @@ export default {
         description: 'Gaji-Labo はプロダクトチーム支援の専門企業です。フロントエンド開発や UI デザインなどの専門技術の提供を軸に、リソース提供ではなく優れたチームワークをデリバリーし、プロダクトを成長させることに取り組んでいます。関西Ruby会議08から技術コミュニティ参加をはじめ、RubyKaigi 2026 のデザインスポンサーを任せていただくことが出来ました。きっかけをありがとうございます！',
         image: '/sponsors/gajilabo.png',
       },
-    ],
-    silver: [
       {
         name: '株式会社Ruby開発',
         url: 'https://www.ruby-dev.jp/',
         description: '株式会社Ruby開発は、Rubyをコア技術としたWebサービス開発のプロフェッショナル集団です。RubyCommitterが2名在籍し、高い技術力と豊富な開発実績を誇ります。AIとRubyを組み合わせ、革新的なサービスの創造を目指します。',
         image: '/sponsors/rubydevelopment.jpg',
       },
+    ],
+    silver: [
       {
         name: '株式会社SmartHR',
         url: 'https://smarthr.co.jp/',
