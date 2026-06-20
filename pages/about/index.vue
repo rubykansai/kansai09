@@ -536,22 +536,9 @@ export default{
         image: 'https://avatars.githubusercontent.com/u/1229937',
       },
       {
-        name: 'onk',
-        twitter: 'https://twitter.com/onk',
-        github: 'https://github.com/onk',
-        role: 'Organizer',
-        image: 'https://avatars.githubusercontent.com/u/203046',
-      },
-      {
         name: 'smantani',
         role: 'Organizer',
         image: 'https://secure.gravatar.com/avatar/f95dd1e4bb869baf82e1e622488ae30e',
-      },
-      {
-        name: 'spring_kuma',
-        twitter: 'https://twitter.com/spring_kuma',
-        role: 'Organizer',
-        image: 'https://avatars.githubusercontent.com/u/194263?v=4',
       },
       {
         name: 'むらじゅん',
