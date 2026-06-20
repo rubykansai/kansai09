@@ -249,21 +249,28 @@
                 Supporter
               </h4>
               <v-row class="mb-10" justify="center">
-                <v-col>
+                <v-col
+                  v-for="supporter in supporters"
+                  :key="supporter.name"
+                  cols="12"
+                  md="4"
+                >
                   <v-card
                     class="supporters"
                     align="center"
                     flat
                   >
-                    <a :href="supporter.link" target="_blank" class="supporter-link">
+                    <a :href="supporter.link" target="_blank" rel="noopener noreferrer" class="supporter-link">
                       <div class="py-2 px-2">
                         <v-img
                           :src="supporter.image"
+                          :alt="supporter.name"
                           max-height="300px"
                           max-width="300px"
                           cover
                           class="supporter-image"
                         />
+                        <v-card-title class="text-body-2">{{ supporter.name }}</v-card-title>
                       </div>
                     </a>
                   </v-card>
@@ -465,21 +472,28 @@
                 Supporter
               </h4>
               <v-row class="mb-10" justify="center">
-                <v-col>
+                <v-col
+                  v-for="supporter in supporters"
+                  :key="supporter.name"
+                  cols="12"
+                  md="4"
+                >
                   <v-card
                     class="supporters"
                     align="center"
                     flat
                   >
-                    <a :href="supporter.link" target="_blank" class="supporter-link">
+                    <a :href="supporter.link" target="_blank" rel="noopener noreferrer" class="supporter-link">
                       <div class="py-2 px-2">
                         <v-img
                           :src="supporter.image"
+                          :alt="supporter.name"
                           max-height="250px"
                           max-width="250px"
                           cover
                           class="supporter-image"
                         />
+                        <v-card-title class="text-body-2">{{ supporter.name }}</v-card-title>
                       </div>
                     </a>
                   </v-card>
@@ -685,11 +699,18 @@ export default{
       { name: 'Umeda.rb', link: 'https://umedarb.connpass.com/', image: '/kansai09/communities/umeda.png' },
       { name: 'Wakayama.rb', link: 'https://wakayama-rb.connpass.com/', image: '/kansai09/communities/wakayama.png' },
     ],
-    supporter: {
-      name: '日本Rubyの会',
-      link: 'https://ruby-no-kai.org/',
-      image: '/kansai09/communities/rubynokai.png',
-    },
+    supporters: [
+      {
+        name: '日本Rubyの会',
+        link: 'https://ruby-no-kai.org/',
+        image: '/kansai09/communities/rubynokai.png',
+      },
+      {
+        name: '和歌山県立桐蔭高等学校',
+        link: 'https://www.toin-h.wakayama-c.ed.jp/',
+        image: '/kansai09/communities/toin.png',
+      },
+    ],
   }),
 }
 </script>
