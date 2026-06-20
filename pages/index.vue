@@ -124,11 +124,11 @@
               </v-btn>
               <v-btn
                 size="large"
-                class="cta-button cta-button--sponsor px-8"
-                href="https://esa-pages.io/p/sharing/22789/posts/19/b1085a24df458e23c0c1.html"
+                class="cta-button cta-button--party px-8"
+                href="https://rubykansai.doorkeeper.jp/events/196021"
                 target="_blank"
               >
-                Become a Sponsor
+                Join Official Party
               </v-btn>
             </div>
             <div class="keynote-names d-md-none">
@@ -145,11 +145,11 @@
               </v-btn>
               <v-btn
                 size="large"
-                class="cta-button cta-button--sponsor px-8"
-                href="https://esa-pages.io/p/sharing/22789/posts/19/b1085a24df458e23c0c1.html"
+                class="cta-button cta-button--party px-8"
+                href="https://rubykansai.doorkeeper.jp/events/196021"
                 target="_blank"
               >
-                Become a Sponsor
+                Join Official Party
               </v-btn>
             </div>
           </v-card-item>
@@ -445,7 +445,7 @@ usePageSeo()
   border-radius: 0 !important;
 }
 
-.cta-button--sponsor {
+.cta-button--party {
   color: #0A1C4C !important;
   background-color: rgba(255, 255, 255, 0.92) !important;
   border-color: #0A1C4C !important;
@@ -457,7 +457,7 @@ usePageSeo()
   box-shadow: 0 4px 12px rgba(10, 28, 76, 0.4);
 }
 
-.cta-button--sponsor:hover {
+.cta-button--party:hover {
   opacity: 1;
   background-color: #EEF3FF !important;
 }
