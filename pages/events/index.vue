@@ -240,12 +240,6 @@ const eventDays = [
       },
     ],
   },
-  {
-    day: 'Day2',
-    title: 'Sun, July 19',
-    shortDate: '07.19 SUN',
-    events: [],
-  },
 ]
 </script>
 

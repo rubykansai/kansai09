@@ -246,7 +246,7 @@
                 </v-col>
               </v-row>
               <h4 align="center" class="text-h4 mb-10">
-                Supporter
+                Supporters
               </h4>
               <v-row class="mb-10" justify="center">
                 <v-col
@@ -469,7 +469,7 @@
                 </v-col>
               </v-row>
               <h4 align="center" class="text-h4 mb-10">
-                Supporter
+                Supporters
               </h4>
               <v-row class="mb-10" justify="center">
                 <v-col
