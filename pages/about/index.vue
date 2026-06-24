@@ -216,6 +216,63 @@
                 </v-col>
               </v-row>
               <h4 align="center" class="text-h4 mb-10">
+                Video Crew
+              </h4>
+              <v-row class="mb-10">
+                <v-col
+                  v-for="(videoCrew, index) in videoCrewMembers"
+                  :key="index"
+                  md="3"
+                  sm="4"
+                >
+                  <v-card
+                    class="organizers"
+                    align="center"
+                    flat
+                  >
+                    <div class="py-2 px-2">
+                      <v-img
+                        :src="videoCrew.image"
+                        max-height="145px"
+                        max-width="145px"
+                        rounded="circle"
+                        cover
+                      />
+                      <v-card-title class="text-body-2">{{ videoCrew.name }}</v-card-title>
+                      <v-card-subtitle class="text-body-2">{{ videoCrew.role }}</v-card-subtitle>
+                      <div class="d-flex justify-center">
+                        <a :href="videoCrew.twitter" v-if="videoCrew.twitter">
+                          <v-btn
+                          class="mx-2"
+                          icon="mdi-twitter"
+                          flat
+                        />
+                        </a>
+                        <v-btn
+                          class="mx-2"
+                          icon="mdi-twitter"
+                          flat
+                          v-if="!videoCrew.twitter"
+                          style="visibility: hidden;"
+                        />
+                        <a :href="videoCrew.github" v-if="videoCrew.github"><v-btn
+                          class="mx-2"
+                          icon="mdi-github"
+                          flat
+                        /></a>
+                        <v-btn
+                          class="mx-2"
+                          icon="mdi-github"
+                          flat
+                          v-if="!videoCrew.github"
+                          style="visibility: hidden;"
+                        />
+                      </div>
+                    </div>
+                  </v-card>
+                </v-col>
+              </v-row>
+              <h4 align="center" class="text-h4 mb-10">
                 Our Communities
               </h4>
               <v-row class="mb-10">
@@ -440,6 +497,46 @@
                 </v-col>
               </v-row>
               <h4 align="center" class="text-h4 mb-10">
+                Video Crew
+              </h4>
+              <v-row class="mb-10">
+                <v-col
+                  v-for="(videoCrew, index) in videoCrewMembers"
+                  :key="index"
+                  cols="6"
+                >
+                  <v-card
+                    class="organizers"
+                    align="center"
+                    flat
+                  >
+                    <div class="py-2 px-2">
+                      <v-img
+                        :src="videoCrew.image"
+                        max-height="145px"
+                        max-width="145px"
+                        rounded="circle"
+                        cover
+                      />
+                      <v-card-title class="text-body-2">{{ videoCrew.name }}</v-card-title>
+                      <v-card-subtitle class="text-body-2">{{ videoCrew.role }}</v-card-subtitle>
+                      <div class="d-flex justify-center">
+                        <a :href="videoCrew.twitter" v-if="videoCrew.twitter"><v-btn
+                          class="mx-2"
+                          icon="mdi-twitter"
+                          flat
+                        /></a>
+                        <a :href="videoCrew.github" v-if="videoCrew.github"><v-btn
+                          class="mx-2"
+                          icon="mdi-github"
+                          flat
+                        /></a>
+                      </div>
+                    </div>
+                  </v-card>
+                </v-col>
+              </v-row>
+              <h4 align="center" class="text-h4 mb-10">
                 Our Communities
               </h4>
               <v-row class="mb-10">
@@ -636,6 +733,22 @@ export default{
         role: 'Organizer',
         image: 'https://avatars.githubusercontent.com/u/1292385',
       },
+      {
+        name: 'kawabata',
+        role: 'Organizer',
+        image: '/kansai09/kawabata.jpg',
+      },
+      {
+        name: 'MiyamotoA',
+        role: 'Organizer',
+        image: '/kansai09/MiyamotoA.jpg',
+      },
+      {
+        name: 'yopey',
+        twitter: 'https://x.com/yopeyt2',
+        role: 'Organizer',
+        image: '/kansai09/yopey.jpg',
+      },
     ],
     designers: [
       {
@@ -670,6 +783,24 @@ export default{
         github: 'https://github.com/murajun1978',
         role: 'Organizer & NOC member',
         image: 'https://avatars.githubusercontent.com/u/911903',
+      },
+    ],
+    videoCrewMembers: [
+      {
+        name: 'kawabata',
+        role: 'Organizer & VideoCrew',
+        image: '/kansai09/kawabata.jpg',
+      },
+      {
+        name: 'MiyamotoA',
+        role: 'Organizer & VideoCrew',
+        image: '/kansai09/MiyamotoA.jpg',
+      },
+      {
+        name: 'yopey',
+        twitter: 'https://x.com/yopeyt2',
+        role: 'Organizer & VideoCrew',
+        image: '/kansai09/yopey.jpg',
       },
     ],
     communities: [
