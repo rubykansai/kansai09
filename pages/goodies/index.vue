@@ -7,26 +7,25 @@
           <v-card
             max-width="90vw"
             min-width="90vw"
-            class="py-10 my-15 px-md-15 px-4"
+            class="py-10 my-15 px-md-10 px-4"
             :elevation="0"
           >
             <v-card-item>
-              <div align="left">
-                <h1 class="text-h4 title align-center mb-6">
+              <div class="page-content" align="left">
+                <h1 class="text-h4 title align-center mb-10">
                   <span><v-img :src="withBaseURL('/ruby.svg')" :width="30" class="mr-2 d-none d-md-flex" /></span>
                   <span><v-img :src="withBaseURL('/ruby.svg')" :width="20" class="mr-2 d-flex d-md-none" /></span>
                   GOODIES
                 </h1>
 
                 <section
-                  v-for="goodie in goodies"
+                  v-for="(goodie, index) in goodies"
                   :key="goodie.name"
-                  class="mb-8"
+                  class="goodie-section"
                 >
                   <v-card class="goodie-card" :elevation="0">
-                    <v-row class="ma-0" align="stretch">
+                    <v-row class="ma-0" align="center">
                       <v-col cols="12" md="7" class="goodie-copy-column">
-                        <p class="goodie-label mb-3">{{ goodie.label }}</p>
                         <p class="mb-4">
                           <a
                             v-if="goodie.url && !goodie.disabled"
@@ -110,6 +109,10 @@
                       </v-col>
                     </v-row>
                   </v-card>
+                  <v-divider
+                    v-if="index < goodies.length - 1"
+                    class="goodie-divider"
+                  />
                 </section>
               </div>
             </v-card-item>
@@ -129,12 +132,9 @@ usePageSeo({
 
 const { app: { baseURL } } = useRuntimeConfig()
 const withBaseURL = (path) => `${baseURL}${path.replace(/^\/+/, '')}`
-const rubyBgUrl = `url('${withBaseURL('/ruby-bg.svg')}')`
-const flowerBgUrl = `url('${withBaseURL('/flower-bg.svg')}')`
 
 const goodies = [
   {
-    label: 'Brand Assets',
     name: 'MAIN VISUAL',
     url: withBaseURL('/main-visual.png'),
     description: '関西Ruby会議09のMain Visualです。広報やイベント紹介などにご利用ください。',
@@ -146,18 +146,17 @@ const goodies = [
     imageAspectRatio: 1920 / 1006,
   },
   {
-    label: 'Speaker Materials',
     name: 'KEYNOTE TEMPLATE',
-    description: '登壇者向けの Keynote Template は現在準備中です。公開までもう少しお待ちください。',
-    buttonLabel: 'COMING SOON',
-    disabled: true,
-    variant: 'coming-soon',
-    visualEyebrow: 'Speaker Kit',
-    visualTitle: 'Coming Soon',
-    visualSubtitle: 'Template assets are in preparation.',
+    url: withBaseURL('/keynote_template_kansairubykaigi09.kth'),
+    description: '登壇者向けの Keynote Template です。発表資料の作成にご利用ください。',
+    buttonLabel: 'DOWNLOAD TEMPLATE',
+    disabled: false,
+    variant: 'keynote-template',
+    image: withBaseURL('/keynote.svg'),
+    imageAlt: '関西Ruby会議09 Keynote Template preview',
+    imageAspectRatio: 800 / 450,
   },
   {
-    label: 'Official Store',
     name: 'OFFICIAL GOODS',
     url: 'https://suzuri.jp/kyobashirb/sections/35030',
     description: '関西Ruby会議09 Official Goods を SUZURI でご案内しています。気になるアイテムはオンラインストアからご確認ください。',
@@ -201,10 +200,8 @@ const goodies = [
   font-weight: 400;
 }
 
-.goodies-intro {
-  max-width: 56rem;
-  line-height: 1.9;
-  color: #22365F;
+.page-content {
+  width: 100%;
 }
 
 .page-link {
@@ -213,31 +210,29 @@ const goodies = [
 }
 
 .goodie-card {
-  background: #F7F9FE;
-  border: 1px solid #D6DEEE;
-  border-radius: 32px !important;
+  background-color: #ffffff;
+  border-radius: 0 !important;
   overflow: hidden;
 }
 
+.goodie-divider {
+  margin: 1.5rem 0;
+}
+
 .goodie-copy-column {
-  padding: 2rem;
+  padding: 2.5rem 2rem;
 }
 
 .goodie-visual-column {
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   padding-left: 0;
 }
 
-.goodie-label,
 .goodie-visual__eyebrow {
   font-family: 'Questrial', sans-serif;
   font-size: 0.85rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-}
-
-.goodie-label {
-  color: #6E7B9B;
 }
 
 .goodie-title,
@@ -278,59 +273,19 @@ const goodies = [
 .goodie-visual {
   min-height: 260px;
   height: 100%;
-  border-radius: 24px;
+  border-radius: 8px;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
   overflow: hidden;
-  transition:
-    transform 220ms ease,
-    box-shadow 220ms ease,
-    filter 220ms ease;
-  will-change: transform;
-}
-
-.goodie-visual::before,
-.goodie-visual::after {
-  content: '';
-  position: absolute;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  opacity: 0.16;
-}
-
-.goodie-visual::before {
-  inset: auto -24px -28px auto;
-  width: 140px;
-  height: 140px;
-  background-image: v-bind(rubyBgUrl);
-}
-
-.goodie-visual::after {
-  inset: 20px auto auto 20px;
-  width: 72px;
-  height: 72px;
-  background-image: v-bind(flowerBgUrl);
-}
-
-.goodie-visual::before,
-.goodie-visual::after {
-  transition: transform 220ms ease, opacity 220ms ease;
-}
-
-.goodie-visual--coming-soon {
-  background: linear-gradient(160deg, #18336D 0%, #5476C6 100%);
-}
-
-.goodie-visual--shop {
-  background: linear-gradient(160deg, #0A1C4C 0%, #23408E 100%);
+  transition: opacity 180ms ease;
 }
 
 .goodie-visual--main-visual,
-.goodie-visual--official-goods {
+.goodie-visual--official-goods,
+.goodie-visual--keynote-template {
   min-height: 0;
   height: auto;
   padding: 0;
@@ -342,36 +297,11 @@ const goodies = [
   background: #0A1C4C;
 }
 
-.goodie-visual--official-goods {
+.goodie-visual--official-goods,
+.goodie-visual--keynote-template {
   aspect-ratio: 800 / 450;
-  background-color: #EEF3FF;
-  background-image:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(225, 235, 255, 0.82)),
-    repeating-linear-gradient(0deg, rgba(10, 28, 76, 0.05) 0 1px, transparent 1px 18px),
-    repeating-linear-gradient(90deg, rgba(10, 28, 76, 0.045) 0 1px, transparent 1px 18px);
-  border: 1px solid #D7E1F6;
-}
-
-.goodie-visual--main-visual::before,
-.goodie-visual--main-visual::after {
-  content: none;
-}
-
-.goodie-visual--official-goods::before,
-.goodie-visual--official-goods::after {
-  opacity: 0.12;
-}
-
-.goodie-visual--official-goods::before {
-  inset: auto 12px 10px auto;
-  width: 112px;
-  height: 112px;
-}
-
-.goodie-visual--official-goods::after {
-  inset: 14px auto auto 16px;
-  width: 64px;
-  height: 64px;
+  background-color: #F7F9FE;
+  border: 1px solid #D6DEEE;
 }
 
 .goodie-visual__image {
@@ -401,32 +331,16 @@ const goodies = [
 
 .page-link:hover .goodie-visual,
 .page-link:focus-visible .goodie-visual {
-  transform: translateY(-6px) scale(1.01);
-  box-shadow: 0 24px 48px rgba(10, 28, 76, 0.18);
-  filter: saturate(1.06);
-}
-
-.page-link:hover .goodie-visual::before,
-.page-link:focus-visible .goodie-visual::before {
-  transform: translate(-6px, -4px) rotate(-8deg) scale(1.04);
-  opacity: 0.22;
-}
-
-.page-link:hover .goodie-visual::after,
-.page-link:focus-visible .goodie-visual::after {
-  transform: translate(4px, 2px) rotate(8deg) scale(1.05);
-  opacity: 0.22;
+  opacity: 0.82;
 }
 
 .page-link:focus-visible .goodie-visual {
-  outline: 3px solid rgba(154, 180, 255, 0.9);
-  outline-offset: 4px;
+  outline: 2px solid #0A1C4C;
+  outline-offset: 3px;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .goodie-visual,
-  .goodie-visual::before,
-  .goodie-visual::after {
+  .goodie-visual {
     transition: none;
   }
 }
@@ -449,10 +363,6 @@ const goodies = [
 }
 
 @media (max-width: 600px) {
-  .goodie-card {
-    border-radius: 24px !important;
-  }
-
   .goodie-copy-column,
   .goodie-visual-column {
     padding: 1.25rem;
@@ -463,7 +373,7 @@ const goodies = [
   }
 
   .goodie-btn,
-  .goodies-intro {
+  .goodie-visual {
     max-width: 100%;
   }
 }
