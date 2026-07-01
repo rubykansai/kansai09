@@ -58,13 +58,23 @@
                           <span>{{ itemSpeaker(item) }}</span>
                         </div>
                       </template>
-                      <NuxtLink
-                        v-else-if="item.path"
-                        :to="item.path"
-                        class="schedule-title schedule-title--link"
-                      >
-                        {{ itemTitle(item) }}
-                      </NuxtLink>
+                      <template v-else-if="item.path">
+                        <v-chip
+                          size="small"
+                          :color="typeColor(item)"
+                          variant="flat"
+                          density="comfortable"
+                          class="schedule-chip mb-3"
+                        >
+                          {{ typeLabel(item) }}
+                        </v-chip>
+                        <NuxtLink
+                          :to="item.path"
+                          class="schedule-title schedule-title--link"
+                        >
+                          {{ itemTitle(item) }}
+                        </NuxtLink>
+                      </template>
                       <p v-else class="schedule-title schedule-title--plain mb-0">
                         {{ itemTitle(item) }}
                       </p>
@@ -108,7 +118,7 @@ const labels = {
   keynote: 'KEYNOTE',
   session: 'SESSION',
   break: 'BREAK',
-  lt: 'LT',
+  lt: 'Lightning Talks',
   sponsor: 'SPONSOR LT',
   party: 'AFTER PARTY',
 }
