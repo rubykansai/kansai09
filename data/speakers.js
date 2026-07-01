@@ -110,6 +110,79 @@ const regularSpeakers = [
   },
 ]
 
+export const ltSpeakers = [
+  {
+    id: 'haruguchi',
+    name: 'haruguchi',
+    image: '/lt/haruguchi.png',
+    socials: [
+      { label: 'GitHub profile for @haruguchi-yuma', href: 'https://github.com/haruguchi-yuma', icon: 'mdi-github' },
+    ],
+  },
+  {
+    id: 'luccafort',
+    name: '@luccafort',
+    image: '/lt/luccafort.png',
+    socials: [
+      { label: 'X profile for @luccafort', href: 'https://x.com/luccafort', icon: 'mdi-twitter' },
+      { label: 'GitHub profile for @luccafort', href: 'https://github.com/luccafort', icon: 'mdi-github' },
+    ],
+  },
+  {
+    id: 'ooharabucyou',
+    name: '川原翔吾 (ooharabucyou)',
+    image: '/lt/ooharabucyou.jpg',
+    socials: [
+      { label: 'GitHub profile for @kawahara', href: 'https://github.com/kawahara', icon: 'mdi-github' },
+    ],
+  },
+  {
+    id: 'shiomachi',
+    name: 'しおまち / shiomachi',
+    image: '/lt/shiomachi.png',
+    socials: [
+      { label: 'X profile for @ShioPy0101', href: 'https://x.com/ShioPy0101', icon: 'mdi-twitter' },
+      { label: 'GitHub profile for @ShioPy0101', href: 'https://github.com/ShioPy0101', icon: 'mdi-github' },
+    ],
+  },
+  {
+    id: 'fkmy',
+    name: 'ふくま',
+    image: '/lt/fkmy.png',
+    socials: [
+      { label: 'X profile for @fkm_y', href: 'https://x.com/fkm_y', icon: 'mdi-twitter' },
+      { label: 'GitHub profile for @fkmy', href: 'https://github.com/fkmy', icon: 'mdi-github' },
+    ],
+  },
+  {
+    id: 'ryotana',
+    name: 'ryotana',
+    image: '/lt/ryotana.jpeg',
+    socials: [
+      { label: 'X profile for @ryotana04', href: 'https://x.com/ryotana04', icon: 'mdi-twitter' },
+      { label: 'GitHub profile for @ryotana424', href: 'https://github.com/ryotana424', icon: 'mdi-github' },
+    ],
+  },
+  {
+    id: 'rokuosan',
+    name: 'rokuosan',
+    image: '/lt/rokuosan.png',
+    socials: [
+      { label: 'X profile for @rokuosan_dev', href: 'https://x.com/rokuosan_dev', icon: 'mdi-twitter' },
+      { label: 'GitHub profile for @rokuosan', href: 'https://github.com/rokuosan', icon: 'mdi-github' },
+    ],
+  },
+  {
+    id: 'tarosay',
+    name: 'たろサ(tarosay) Wakayama.rb',
+    image: '/lt/tarosay.jpg',
+    socials: [
+      { label: 'X profile for @momoonga', href: 'https://x.com/momoonga', icon: 'mdi-twitter' },
+      { label: 'GitHub profile for @tarosay', href: 'https://github.com/tarosay', icon: 'mdi-github' },
+    ],
+  },
+]
+
 export const speakers = [...regularSpeakers].sort((a, b) => (
   a.name.localeCompare(b.name, ['ja', 'en'], { sensitivity: 'base' })
 ))

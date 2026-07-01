@@ -44,7 +44,7 @@
                       >
                         <div class="speaker-card__inner py-2 px-2">
                           <v-img
-                            :src="speaker.image"
+                            :src="speakerImage(speaker)"
                             :alt="speaker.name"
                             max-height="10rem"
                             max-width="10rem"
@@ -71,7 +71,7 @@
                               />
                             </a>
                           </div>
-                          <div align="left">
+                          <div v-if="speaker.description" align="left">
                             <p class="text-body-2 speaker-description mt-2 mb-0">
                               {{ speaker.description }}
                             </p>
@@ -93,7 +93,7 @@
 </template>
 
 <script setup>
-import { keynoteSpeakers, speakers } from '~/data/speakers'
+import { keynoteSpeakers, ltSpeakers, speakers } from '~/data/speakers'
 
 usePageSeo({
   title: 'Speakers - 関西Ruby会議09',
@@ -102,6 +102,9 @@ usePageSeo({
 
 const { app: { baseURL } } = useRuntimeConfig()
 const withBaseURL = (path) => `${baseURL}${path.replace(/^\/+/, '')}`
+const speakerImage = (speaker) => (
+  speaker.image.startsWith('/') ? withBaseURL(speaker.image) : speaker.image
+)
 
 const speakerSections = [
   {
@@ -117,7 +120,16 @@ const speakerSections = [
     speakers,
     sm: 6,
     md: 4,
+    rowClass: 'justify-center mb-12',
+    headingClass: 'mb-10',
+  },
+  {
+    title: 'LT SPEAKERS',
+    speakers: ltSpeakers,
+    sm: 6,
+    md: 3,
     rowClass: 'justify-center',
+    cardClass: 'speaker-card--lt',
     headingClass: 'mb-10',
   },
 ]
