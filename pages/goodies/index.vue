@@ -75,9 +75,18 @@
                           class="page-link"
                         >
                           <div class="goodie-visual" :class="`goodie-visual--${goodie.variant}`">
-                            <p class="goodie-visual__eyebrow mb-3">{{ goodie.visualEyebrow }}</p>
-                            <h2 class="goodie-visual__title mb-2">{{ goodie.visualTitle }}</h2>
-                            <p class="goodie-visual__subtitle mb-0">{{ goodie.visualSubtitle }}</p>
+                            <v-img
+                              v-if="goodie.image"
+                              :src="goodie.image"
+                              :alt="goodie.imageAlt"
+                              :aspect-ratio="goodie.imageAspectRatio"
+                              class="goodie-visual__image"
+                            />
+                            <template v-else>
+                              <p class="goodie-visual__eyebrow mb-3">{{ goodie.visualEyebrow }}</p>
+                              <h2 class="goodie-visual__title mb-2">{{ goodie.visualTitle }}</h2>
+                              <p class="goodie-visual__subtitle mb-0">{{ goodie.visualSubtitle }}</p>
+                            </template>
                           </div>
                         </a>
                         <div
@@ -85,9 +94,18 @@
                           class="goodie-visual"
                           :class="`goodie-visual--${goodie.variant}`"
                         >
-                          <p class="goodie-visual__eyebrow mb-3">{{ goodie.visualEyebrow }}</p>
-                          <h2 class="goodie-visual__title mb-2">{{ goodie.visualTitle }}</h2>
-                          <p class="goodie-visual__subtitle mb-0">{{ goodie.visualSubtitle }}</p>
+                          <v-img
+                            v-if="goodie.image"
+                            :src="goodie.image"
+                            :alt="goodie.imageAlt"
+                            :aspect-ratio="goodie.imageAspectRatio"
+                            class="goodie-visual__image"
+                          />
+                          <template v-else>
+                            <p class="goodie-visual__eyebrow mb-3">{{ goodie.visualEyebrow }}</p>
+                            <h2 class="goodie-visual__title mb-2">{{ goodie.visualTitle }}</h2>
+                            <p class="goodie-visual__subtitle mb-0">{{ goodie.visualSubtitle }}</p>
+                          </template>
                         </div>
                       </v-col>
                     </v-row>
@@ -116,6 +134,18 @@ const flowerBgUrl = `url('${withBaseURL('/flower-bg.svg')}')`
 
 const goodies = [
   {
+    label: 'Brand Assets',
+    name: 'MAIN VISUAL',
+    url: withBaseURL('/main-visual.png'),
+    description: '関西Ruby会議09のMain Visualです。広報やイベント紹介などにご利用ください。',
+    buttonLabel: 'OPEN IMAGE',
+    disabled: false,
+    variant: 'main-visual',
+    image: withBaseURL('/main-visual.png'),
+    imageAlt: 'Kansai RubyKaigi 9 Main Visual',
+    imageAspectRatio: 1920 / 1006,
+  },
+  {
     label: 'Speaker Materials',
     name: 'KEYNOTE TEMPLATE',
     description: '登壇者向けの Keynote Template は現在準備中です。公開までもう少しお待ちください。',
@@ -133,10 +163,10 @@ const goodies = [
     description: '関西Ruby会議09 Official Goods を SUZURI でご案内しています。気になるアイテムはオンラインストアからご確認ください。',
     buttonLabel: 'GO TO SHOP',
     disabled: false,
-    variant: 'shop',
-    visualEyebrow: 'SUZURI',
-    visualTitle: 'Official Goods',
-    visualSubtitle: 'Kansai RubyKaigi 09',
+    variant: 'official-goods',
+    image: withBaseURL('/goods.png'),
+    imageAlt: '関西Ruby会議09 Official Goods T-shirts',
+    imageAspectRatio: 800 / 450,
   },
 ]
 </script>
@@ -297,6 +327,58 @@ const goodies = [
 
 .goodie-visual--shop {
   background: linear-gradient(160deg, #0A1C4C 0%, #23408E 100%);
+}
+
+.goodie-visual--main-visual,
+.goodie-visual--official-goods {
+  min-height: 0;
+  height: auto;
+  padding: 0;
+  justify-content: center;
+}
+
+.goodie-visual--main-visual {
+  aspect-ratio: 1920 / 1006;
+  background: #0A1C4C;
+}
+
+.goodie-visual--official-goods {
+  aspect-ratio: 800 / 450;
+  background-color: #EEF3FF;
+  background-image:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(225, 235, 255, 0.82)),
+    repeating-linear-gradient(0deg, rgba(10, 28, 76, 0.05) 0 1px, transparent 1px 18px),
+    repeating-linear-gradient(90deg, rgba(10, 28, 76, 0.045) 0 1px, transparent 1px 18px);
+  border: 1px solid #D7E1F6;
+}
+
+.goodie-visual--main-visual::before,
+.goodie-visual--main-visual::after {
+  content: none;
+}
+
+.goodie-visual--official-goods::before,
+.goodie-visual--official-goods::after {
+  opacity: 0.12;
+}
+
+.goodie-visual--official-goods::before {
+  inset: auto 12px 10px auto;
+  width: 112px;
+  height: 112px;
+}
+
+.goodie-visual--official-goods::after {
+  inset: 14px auto auto 16px;
+  width: 64px;
+  height: 64px;
+}
+
+.goodie-visual__image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .goodie-visual__eyebrow,
