@@ -116,7 +116,7 @@ Rails を触ったことがある方なら、すぐに試せる内容です。Ra
   {
     id: 'yhara',
     type: 'session',
-    title: 'GCの気持ち考えたことある？',
+    title: 'Can you see? I\'m GC',
     speaker: speaker('yhara'),
     abstract: `Ruby処理系にとって欠かせない構成要素であるにもかかわらず、日ごろあまり顧みられることのないGC。本トークではそんなGCに光をあてます。Ruby 3.4から導入されたModular GC機能を用いてカスタムのGCを作成し、最終的にGCの苦労を体験可能にします。`,
   },
