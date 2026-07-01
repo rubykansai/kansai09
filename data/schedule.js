@@ -257,7 +257,9 @@ export const scheduleItems = [
     start: '17:30',
     end: '17:35',
     duration: '0:05',
-    title: 'Sponsor LT',
+    title: '大規模開発とチームを支えるRubyの好きなところ！',
+    speakerName: '御園 信大（虎の穴ラボ株式会社）',
+    speakerImage: '/sponsors/toranoanalab.jpg',
     type: 'sponsor',
   },
   {

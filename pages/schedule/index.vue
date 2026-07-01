@@ -30,7 +30,7 @@
                     </time>
 
                     <div class="schedule-detail">
-                      <template v-if="item.presentation">
+                      <template v-if="item.presentation || item.speakerName">
                         <v-chip
                           size="small"
                           :color="typeColor(item)"
@@ -41,19 +41,25 @@
                           {{ typeLabel(item) }}
                         </v-chip>
                         <NuxtLink
+                          v-if="item.presentation"
                           :to="presentationPath(item)"
                           class="schedule-title schedule-title--link"
                         >
                           {{ itemTitle(item) }}
                         </NuxtLink>
+                        <p v-else class="schedule-title mb-0">
+                          {{ itemTitle(item) }}
+                        </p>
                         <div class="schedule-speaker">
                           <v-img
-                            :src="item.presentation.speaker.image"
+                            v-if="itemSpeakerImage(item)"
+                            :src="itemSpeakerImageSrc(item)"
                             :alt="itemSpeaker(item)"
                             width="32"
                             height="32"
-                            cover
+                            :cover="!item.speakerImage"
                             class="schedule-speaker__avatar"
+                            :class="{ 'schedule-speaker__avatar--logo': item.speakerImage }"
                           />
                           <span>{{ itemSpeaker(item) }}</span>
                         </div>
@@ -126,10 +132,22 @@ const labels = {
 const colors = {
   keynote: '#F5C6CA',
   session: '#BFE7B8',
+  lt: '#F8DFA8',
+  sponsor: '#D8D3F2',
 }
 
 const itemTitle = (item) => item.presentation?.title ?? item.title
-const itemSpeaker = (item) => item.presentation?.speaker?.name ?? '-'
+const itemSpeaker = (item) => item.presentation?.speaker?.name ?? item.speakerName ?? '-'
+const itemSpeakerImage = (item) => item.presentation?.speaker?.image ?? item.speakerImage ?? null
+const itemSpeakerImageSrc = (item) => {
+  const image = itemSpeakerImage(item)
+
+  if (!image) {
+    return null
+  }
+
+  return image.startsWith('/') ? withBaseURL(image) : image
+}
 const presentationPath = (item) => `/presentations/${item.presentation.id}`
 const itemPath = (item) => item.path ?? presentationPath(item)
 const typeLabel = (item) => labels[item.type] ?? item.type.toUpperCase()
@@ -303,6 +321,11 @@ const itemClasses = (item) => [
   height: 32px;
   border-radius: 50%;
   background-color: #D9D9D9;
+}
+
+.schedule-speaker__avatar--logo {
+  border-radius: 4px;
+  background-color: #ffffff;
 }
 
 .schedule-more {
