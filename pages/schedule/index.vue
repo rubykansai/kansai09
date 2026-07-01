@@ -58,14 +58,21 @@
                           <span>{{ itemSpeaker(item) }}</span>
                         </div>
                       </template>
+                      <NuxtLink
+                        v-else-if="item.path"
+                        :to="item.path"
+                        class="schedule-title schedule-title--link"
+                      >
+                        {{ itemTitle(item) }}
+                      </NuxtLink>
                       <p v-else class="schedule-title schedule-title--plain mb-0">
                         {{ itemTitle(item) }}
                       </p>
                     </div>
 
                     <NuxtLink
-                      v-if="item.presentation"
-                      :to="presentationPath(item)"
+                      v-if="item.presentation || item.path"
+                      :to="itemPath(item)"
                       class="schedule-more"
                       :aria-label="`${itemTitle(item)} の詳細`"
                     >
@@ -114,6 +121,7 @@ const colors = {
 const itemTitle = (item) => item.presentation?.title ?? item.title
 const itemSpeaker = (item) => item.presentation?.speaker?.name ?? '-'
 const presentationPath = (item) => `/presentations/${item.presentation.id}`
+const itemPath = (item) => item.path ?? presentationPath(item)
 const typeLabel = (item) => labels[item.type] ?? item.type.toUpperCase()
 const typeColor = (item) => colors[item.type] ?? '#E3EDF7'
 const rowTone = (item) => {

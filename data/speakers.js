@@ -120,20 +120,21 @@ export const ltSpeakers = [
     ],
   },
   {
-    id: 'luccafort',
-    name: '@luccafort',
-    image: '/lt/luccafort.png',
+    id: 'rokuosan',
+    name: 'rokuosan',
+    image: '/lt/rokuosan.png',
     socials: [
-      { label: 'X profile for @luccafort', href: 'https://x.com/luccafort', icon: 'mdi-twitter' },
-      { label: 'GitHub profile for @luccafort', href: 'https://github.com/luccafort', icon: 'mdi-github' },
+      { label: 'X profile for @rokuosan_dev', href: 'https://x.com/rokuosan_dev', icon: 'mdi-twitter' },
+      { label: 'GitHub profile for @rokuosan', href: 'https://github.com/rokuosan', icon: 'mdi-github' },
     ],
   },
   {
-    id: 'ooharabucyou',
-    name: '川原翔吾 (ooharabucyou)',
-    image: '/lt/ooharabucyou.jpg',
+    id: 'tarosay',
+    name: 'たろサ(tarosay) Wakayama.rb',
+    image: '/lt/tarosay.jpg',
     socials: [
-      { label: 'GitHub profile for @kawahara', href: 'https://github.com/kawahara', icon: 'mdi-github' },
+      { label: 'X profile for @momoonga', href: 'https://x.com/momoonga', icon: 'mdi-twitter' },
+      { label: 'GitHub profile for @tarosay', href: 'https://github.com/tarosay', icon: 'mdi-github' },
     ],
   },
   {
@@ -164,21 +165,20 @@ export const ltSpeakers = [
     ],
   },
   {
-    id: 'rokuosan',
-    name: 'rokuosan',
-    image: '/lt/rokuosan.png',
+    id: 'luccafort',
+    name: '@luccafort',
+    image: '/lt/luccafort.png',
     socials: [
-      { label: 'X profile for @rokuosan_dev', href: 'https://x.com/rokuosan_dev', icon: 'mdi-twitter' },
-      { label: 'GitHub profile for @rokuosan', href: 'https://github.com/rokuosan', icon: 'mdi-github' },
+      { label: 'X profile for @luccafort', href: 'https://x.com/luccafort', icon: 'mdi-twitter' },
+      { label: 'GitHub profile for @luccafort', href: 'https://github.com/luccafort', icon: 'mdi-github' },
     ],
   },
   {
-    id: 'tarosay',
-    name: 'たろサ(tarosay) Wakayama.rb',
-    image: '/lt/tarosay.jpg',
+    id: 'ooharabucyou',
+    name: '川原翔吾 (ooharabucyou)',
+    image: '/lt/ooharabucyou.jpg',
     socials: [
-      { label: 'X profile for @momoonga', href: 'https://x.com/momoonga', icon: 'mdi-twitter' },
-      { label: 'GitHub profile for @tarosay', href: 'https://github.com/tarosay', icon: 'mdi-github' },
+      { label: 'GitHub profile for @kawahara', href: 'https://github.com/kawahara', icon: 'mdi-github' },
     ],
   },
 ]

@@ -251,6 +251,7 @@ export const scheduleItems = [
     duration: '0:50',
     title: '関西LT保安協会',
     type: 'lt',
+    path: '/presentations/lt',
   },
   {
     start: '17:30',
