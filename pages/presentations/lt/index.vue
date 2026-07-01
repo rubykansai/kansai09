@@ -218,8 +218,9 @@ const typeColor = '#E3EDF7'
 
 .lt-description {
   color: #041D4F;
+  font-family: 'Hina Mincho', 'Noto Sans JP', serif;
   font-size: 1.05rem;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 2;
   margin-inline: auto;
   max-width: 56rem;
@@ -227,6 +228,7 @@ const typeColor = '#E3EDF7'
 }
 
 .lt-description p {
+  font-family: 'Hina Mincho', 'Noto Sans JP', serif;
   margin: 0;
 }
 
