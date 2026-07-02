@@ -20,7 +20,7 @@ export const ltPresentations = [
   },
   {
     id: 'rokuosan',
-    title: 'Ruby キュー 入門',
+    title: '発見！Ruby 9',
     speaker: speaker('rokuosan'),
   },
   {
